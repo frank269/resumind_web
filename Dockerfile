@@ -7,5 +7,10 @@ RUN npm install
 COPY /dist/vuexy /app/dist/vuexy
 
 # Stage 2
-FROM nginx:1.20.1
-COPY --from=build-step /app/dist/vuexy /usr/share/nginx/html
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=build-step /app/dist/vuexy .
+COPY default.conf /etc/nginx/conf.d/
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

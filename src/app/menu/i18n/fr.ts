@@ -10,6 +10,7 @@ export const locale = {
       },
       APPS: {
         SECTION: 'Applications et pages',
+        BUBBLE: 'Bubble',
         EMAIL: 'E-mail',
         CHAT: 'Discuter',
         TODO: 'À faire',

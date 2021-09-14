@@ -11,6 +11,10 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 // routing
 const routes: Routes = [
   {
+    path: 'bubble',
+    loadChildren: () => import('./bubble/bubble.module').then(m => m.BubbleModule)
+  },
+  {
     path: 'email',
     loadChildren: () => import('./email/email.module').then(m => m.EmailModule)
   },
@@ -46,4 +50,4 @@ FullCalendarModule.registerPlugins([dayGridPlugin, timeGridPlugin, listPlugin, i
   declarations: [],
   imports: [CommonModule, RouterModule.forChild(routes)]
 })
-export class AppsModule {}
+export class AppsModule { }

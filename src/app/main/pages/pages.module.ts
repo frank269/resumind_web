@@ -30,11 +30,11 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
     AuthenticationModule,
     MiscellaneousModule,
     Ng2FlatpickrModule,
-    PricingModule,
-    BlogModule,
+    // PricingModule,
+    // BlogModule,
     ProfileModule,
-    KbModule,
-    FaqModule,
+    // KbModule,
+    // FaqModule,
     AccountSettingsModule
   ],
 
